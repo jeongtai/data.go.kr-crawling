@@ -7,7 +7,11 @@ typeName = {
         'getCpctyAtentInfoList' : '용량주의',
         'getPwnmTabooInfoList' : '임부금기',
         'getSpcifyAgrdeTabooInfoList' : '특정연령대금기',
-        'getUsjntTabooInfoList' : '병용금기'}
+        'getUsjntTabooInfoList' : '병용금기',
+        'getMdlrtActionByAreaStats' : '진료행위의료기관지역별통계',
+        'getMdlrtActionByClassesStats' : '진료행위의료기관종별통계',
+        'getMdlrtActionByGenderAgeStats' : '진료행위성별연령별통계',
+        'getMdlrtActionNameCodeList' : '진료행위명칭/코드'}
 
 typeName_reverse = dict(zip(typeName.values(),typeName.keys()))
 
@@ -60,6 +64,20 @@ typeList= {
         "STDR_STND": "\uae30\uc900\ubc0f\uaddc\uaca9",
         "BSSH_NM": "\uc218\uc785\uc5c5\uccb4",
         "GU_PRDLST_MNF_MANAGE_NO": "\ud488\ubaa9\uc81c\uc870\uad00\ub9ac\ubc88\ud638"
-        }
+        },
+     "getMdlrtActionByAreaStats":{
+      "execAmt01": "\uae08\uc5611",
+      "execAmt02": "\uae08\uc5612",
+      "execAmt03": "\uae08\uc5613",
+      "execFq01": "\uc2e4\uc2dc\ud69f\uc2181",
+      "execFq02": "\uc2e4\uc2dc\ud69f\uc2182",
+      "execFq03": "\uc2e4\uc2dc\ud69f\uc2183",
+      "lcName": "LC_NAME (\uc9c0\uc5ed)",
+      "mdfeeCd": "\uc218\uac00\ucf54\ub4dc",
+      "mdfeeNm": "\uc218\uac00\ucf54\ub4dc\uba85",
+      "pintCnt01": "\ud658\uc790\uc2181",
+      "pintCnt02": "\ud658\uc790\uc2182",
+      "pintCnt03": "\ud658\uc790\uc2183"
+    }  
 }
-print(typeList)
+
