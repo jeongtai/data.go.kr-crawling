@@ -11,7 +11,19 @@ typeName = {
         'getMdlrtActionByAreaStats' : '진료행위의료기관지역별통계',
         'getMdlrtActionByClassesStats' : '진료행위의료기관종별통계',
         'getMdlrtActionByGenderAgeStats' : '진료행위성별연령별통계',
-        'getMdlrtActionNameCodeList' : '진료행위명칭/코드'}
+        'getMdlrtActionNameCodeList' : '진료행위명칭/코드조회',
+        'getSpcHospAppnFieldList' : '전문병원지정분야',
+        'getSpclMdlrtInfoList' : '특수진료정보(진료가능분야조회)',
+        'getNursigGradeInfoList' : '간호등급정보',
+        'getCgffdAddiInfoList' : '식대가산정보',
+        'getMedicalEquipmentInfoList' : '의료장비정보',
+        'getTransportInfoList' : '교통정보',
+        'getMdlrtSbjectInfoList' : '진료과목정보',
+        'getDetailInfo' : '세부정보',
+        'getFacilityInfo' : '시설정보',
+        'getNonPaymentItemCodeList' : '비급여항목코드조회',
+        'getNonPaymentItemHospList' : '비급여항목병원목록',
+        }
 
 typeName_reverse = dict(zip(typeName.values(),typeName.keys()))
 
@@ -323,5 +335,150 @@ typeList= {
             "pintCnt02": "환자수2",
             "pintCnt03": "환자수3"
         },
+        "getSpcHospAppnFieldList" : {
+            "srchCd" : "구분 코드",
+            "srchCdNm" : "구분 코드명"
+        },
+        "getSpclMdlrtInfoList": {
+            "srchCd": "구분 코드",
+            "srchCdNm": "구분 코드명"
+        },
+        "getNursigGradeInfoList": {
+            "tyCd": "구분 코드",
+            "tyCdNm": "구분 코드명",
+            "careGrd" : "간호등급"
+        },
+        "getCgffdAddiInfoList": {
+            "tyCd": "구분 코드",
+            "tyCdNm": "구분 코드명",
+            "careGrd" : "일반식 가산 적용여부",
+            "calcNopCnt" : "인원수",
+            "trmealGrd" : "등급"
+        },
+        "getMedicalEquipmentInfoList": {
+            "tyCd": "장비코드",
+            "tyCdNm": "장비명",
+            "careGrd" : "보유대수"
+        },
+        "getTransportInfoList":{
+          "trafNm": "\uad50\ud1b5\ud3b8",
+          "lineNo": "\ub178\uc120\ubc88\ud638",
+          "arivPlc": "\ud558\ucc28\uc9c0\uc810",
+          "dir": "\ubc29\ud5a5",
+          "dist": "\uac70\ub9ac",
+          "rmk": "\ube44\uace0"
+        },
+        "getMdlrtSbjectInfoList":{
+          "dgsbjtCd": "\uc9c4\ub8cc\uacfc\ubaa9\ucf54\ub4dc",
+          "dgsbjtCdNm": "\uc9c4\ub8cc\uacfc\ubaa9\ucf54\ub4dc\uba85",
+          "dgsbjtPrSdrCnt": "\uc758\uc0ac\uc218",
+          "cdiagDrCnt": "\uc120\ud0dd\uc9c4\ub8cc\uc758\uc0ac\uc218"
+        },
+        "getDetailInfo":{
+          "plcNm": "\uacf5\uacf5\uac74\ubb3c(\uc7a5\uc18c) \uc774\ub984",
+          "plcDir": "\uacf5\uacf5\uac74\ubb3c(\uc7a5\uc18c) \ubc29\ud5a5",
+          "plcDist": "\uacf5\uacf5\uac74\ubb3c(\uc7a5\uc18c) \uac70\ub9ac",
+          "parkQty": "\uc8fc\ucc28 \uac00\ub2a5\ub300\uc218",
+          "parkXpnsYn": "\uc8fc\ucc28\uc7a5 \uc6b4\uc601\uc5ec\ubd80, \uc8fc\ucc28\ube44\uc6a9 \ubd80\ub2f4\uc5ec\ubd80",
+          "parkEtc": "\uae30\ud0c0 \uc548\ub0b4\uc0ac\ud56d",
+          "noTrmtSun": "\uc77c\uc694\uc77c \ud734\uc9c4 \uc548\ub0b4",
+          "noTrmtHoli": "\uacf5\ud734\uc77c \ud734\uc9c4 \uc548\ub0b4",
+          "emyDayYn": "\uc8fc\uac04 \uc751\uae09\uc2e4 \uc6b4\uc601\uc5ec\ubd80",
+          "emyDayTelNo1": "\uc8fc\uac04 \uc751\uae09\uc2e4 \uc804\ud654\ubc88\ud638 1",
+          "emyDayTelNo2": "\uc8fc\uac04 \uc751\uae09\uc2e4 \uc804\ud654\ubc88\ud638 2",
+          "emyNgtYn": "\uc57c\uac04 \uc751\uae09\uc2e4 \uc6b4\uc601\uc5ec\ubd80",
+          "emyNgtTelNo1": "emyNgtTelNo1\t\uc57c\uac04 \uc751\uae09\uc2e4 \uc804\ud654\ubc88\ud638 1",
+          "emyNgtTelNo2": "emyNgtTelNo1\t\uc57c\uac04 \uc751\uae09\uc2e4 \uc804\ud654\ubc88\ud638 2",
+          "lunchWeek": "\uc6d4~\uae08 \uc810\uc2ec\uc2dc\uac04"
+        },
+        "getFacilityInfo": {
+            "yadmNm": "병원명",
+            "clCd": "종별 코드",
+            "clCdNm": "종별 코드명",
+            "orgTyCd": "설립 구분",
+            "orgTyCdNm": "설립 구분명",
+            "sidoCd": "시도코드",
+            "sidoCdNm": "시도명",
+            "sgguCd": "시군구코드",
+            "sgguCdNm": "시군구명",
+            "emdongNm": "읍면동명",
+            "postNo": "우편번호",
+            "addr": "주소",
+            "telno": "전화번호",
+            "hghrSickbdCnt": "상급 입원실(병상수)",
+            "stdSickbdCnt": "일반 입원실(병상수)",
+            "aduChldSprmCnt": "성인/소아 중환자실(병상수)",
+            "nbySprmCnt": "신생아 중환자실(병상수)",
+            "partumCnt": "분만실(병상수)",
+            "soprmCnt": "수술실(병상수)",
+            "emymCnt": "응급실(병상수)",
+            "ptrmCnt": "물리치료실(병상수)",
+            "hospUrl": "홈페이지",
+            "estbDd": "개설일자"
+        },
+        "getNonPaymentItemHospList": {
+            "clCd": "종별코드(병원구분코드)",
+            "clCdNm": "종별코드명(병원구분)",
+            "divCd1": "1차분류코드(항목명코드)",
+            "divCd1Nm": "1차분류코드명(항목명)",
+            "divCd2": "2차분류코드(중분류코드)",
+            "divCd2Nm": "2차분류코드명(중분류)",
+            "divCd3": "3차분류코드",
+            "divCd3Nm": "3차분류코드명",
+            "invtDt": "기준일",
+            "itmCd": "항목코드",
+            "itmCdNm": "항목코드명(병원사용명칭)",
+            "itmPrcMax": "항목의 최대비용",
+            "itmPrcMin": "항목의 최소비용",
+            "prcMax": "최대비용",
+            "prcMin": "최소비용",
+            "rmk1": "비고1",
+            "sgguCd": "시군구코드",
+            "sgguCdNm": "시군구명",
+            "sidoCd": "시도코드",
+            "sidoCdNm": "시도명",
+            "url": "확인URL",
+            "yadmNm": "병원명",
+            "ykiho": "암호화된 요양기호"
+        },
+        "getNonPaymentItemCodeList" : {
+            "divCd1": "1차분류코드",
+            "divCd1Nm": "1차분류코드명",
+            "divCd1Dsc": "1차분류코드설명",
+            "divCd2": "2차분류코드",
+            "divCd2Nm": "2차분류코드명",
+            "divCd2Dsc": "2차분류코드설명",
+            "divCd3": "3차분류코드",
+            "divCd3Nm": "3차분류코드명",
+            "divCd3Dsc": "3차분류코드설명"
+        },
+         "getNonPaymentItemCodeList": {
+            "impEntpNm": "수입업체명",
+            "itmNm": "품목명",
+            "ldgrpCd": "대분류군코드",
+            "ldgrpCdNm": "대분류군코드명",
+            "ldivCd": "대분류코드",
+            "ldivCdNm": "대분류코드명",
+            "mcatCd": "재료대코드",
+            "mdivCdNm": "중분류코드명",
+            "mnfEntpNm": "제조업체명",
+            "mxUnprc": "상한단가",
+            "nomNm": "규격명",
+            "payTpNm": "급여구분명",
+            "unit": "단위"
+        },
+        "getClinicTop5List" : {
+            "crtrYm": "기준년월",
+            "mfrnIntrsIlnsNm1": "국민관심질병명1",
+            "mfrnIntrsIlnsNm2": "국민관심질병명2",
+            "mfrnIntrsIlnsNm3": "국민관심질병명3",
+            "mfrnIntrsIlnsNm4": "국민관심질병명4",
+            "mfrnIntrsIlnsNm5": "국민관심질병명5",
+            "shwSbjtNm": "표시과목명",
+            "yadmNm": "요양기관명",
+            "ykiho": "암호화된 요양기호"
+        }
+
+
 }
 
