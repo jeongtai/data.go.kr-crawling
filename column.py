@@ -1,17 +1,24 @@
 typeName = {
-        'getDurPrdlstInfoList' : 'DUR품목정보', 
-        'getSeobangjeongPartitnAtentInfoList' : '분할주의',
+    #DUR품목정보서비스
         'getEfcyDplctInfoList' : '효능군중복',
+        'getDurPrdlstInfoList' : 'DUR품목정보',
+        'getSeobangjeongPartitnAtentInfoList' : '분할주의',
         'getOdsnAtentInfoList' : '노인주의',
-        'getMdctnPdAtentInfoList' : '투여기간주의',
+        'getMdctnPdAtentInfoList': '투여기간주의',
         'getCpctyAtentInfoList' : '용량주의',
         'getPwnmTabooInfoList' : '임부금기',
         'getSpcifyAgrdeTabooInfoList' : '특정연령대금기',
         'getUsjntTabooInfoList' : '병용금기',
+    #의약품성분약효정보조회서비스
+        'getMajorCmpnNmCdList' : '주성분명칭코드목록조회',
+    #건강기능식품 대상별 정보(DB) 서비스
+        'getHtfsInfoList' : '건강기능식품 대상별 정보',
+    #건강보험심사평가원 진료행위정보서비스
         'getMdlrtActionByAreaStats' : '진료행위의료기관지역별통계',
         'getMdlrtActionByClassesStats' : '진료행위의료기관종별통계',
         'getMdlrtActionByGenderAgeStats' : '진료행위성별연령별통계',
         'getMdlrtActionNameCodeList' : '진료행위명칭/코드조회',
+    #건강보험심사평가원 의료기관별상세정보서비스
         'getSpcHospAppnFieldList' : '전문병원지정분야',
         'getSpclMdlrtInfoList' : '특수진료정보(진료가능분야조회)',
         'getNursigGradeInfoList' : '간호등급정보',
@@ -21,8 +28,13 @@ typeName = {
         'getMdlrtSbjectInfoList' : '진료과목정보',
         'getDetailInfo' : '세부정보',
         'getFacilityInfo' : '시설정보',
-        'getNonPaymentItemCodeList' : '비급여항목코드조회',
+    #건강보험심사평가원 비급여진료비정보서비스
         'getNonPaymentItemHospList' : '비급여항목병원목록',
+        'getNonPaymentItemCodeList' : '비급여항목코드조회',
+    #건강보험심사평가원 치료재료정보조회서비스
+        'getPaymentNonPaymentList' : '급여비급여목록조회',
+    #건강보험심사평가원 병원진료정보조회서비스
+        'getClinicTop5List' : '의원진료상위질병5개목록조회'
         }
 
 typeName_reverse = dict(zip(typeName.values(),typeName.keys()))
@@ -128,32 +140,6 @@ typeList= {
             'MAIN_INGR': '주성분',
             'PROHBT_CONTENT': '금기내용',
             'REMARK': '비고',
-            'CHANGE_DATE': '변경일자'},
-        'getEfcyDplctInfoList' : {
-            'DUR_SEQ': 'DUR일련번호',
-            'EFFECT_NAME': '효능',
-            'INGR_CODE': 'DUR성분코드',
-            'INGR_NAME': '성분명',
-            'INGR_ENG_NAME': 'DUR성분(영문)',
-            'FORM_CODE_NAME': '제형구분',
-            'MIX': '단일/복합',
-            'MIX_INGR': '복합제',
-            'ITEM_SEQ': '품목기준코드',
-            'ITEM_NAME': '품목명',
-            'ITEM_PERMIT_DATE': '품목허가일자',
-            'CHART': '성상',
-            'ENTP_NAME': '업체명',
-            'FORM_CODE': '제형구분코드',
-            'FORM_NAME': '제형',
-            'ETC_OTC_CODE': '전문일반 구분코드',
-            'ETC_OTC_NAME': '전문/일반',
-            'CLASS_CODE': '약효분류코드',
-            'CLASS_NAME': '약효분류',
-            'MAIN_INGR': '주성분',
-            'NOTIFICATION_DATE': '고시일자',
-            'PROHBT_CONTENT': '금기내용',
-            'REMARK': '비고',
-            'INGR_ENG_NAME_FULL': 'DUR성분상세명',
             'CHANGE_DATE': '변경일자'},
         'getOdsnAtentInfoList' : {
             'MIX_TYPE': '단일/복합구분',
@@ -452,7 +438,7 @@ typeList= {
             "divCd3Nm": "3차분류코드명",
             "divCd3Dsc": "3차분류코드설명"
         },
-         "getNonPaymentItemCodeList": {
+         "getPaymentNonPaymentList": {
             "impEntpNm": "수입업체명",
             "itmNm": "품목명",
             "ldgrpCd": "대분류군코드",
