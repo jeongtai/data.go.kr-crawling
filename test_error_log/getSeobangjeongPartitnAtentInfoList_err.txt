@@ -1,0 +1,66 @@
+==================================
+http://apis.data.go.kr/1470000/DURPrdlstInfoService/getSeobangjeongPartitnAtentInfoList?servicekey=qx1rTzz3GHMRrD7mzJ%2BVoJf2FGOA9L89k1GCg6W9AVlx2IBQ8h%2FwckiodyqwAAjwx2pByE83SYr5Ahk5j4Q%2BUQ%3D%3D&numOfRows=100&typeName=분할주의&pageNo=11
+11
+==================================
+http://apis.data.go.kr/1470000/DURPrdlstInfoService/getSeobangjeongPartitnAtentInfoList?servicekey=qx1rTzz3GHMRrD7mzJ%2BVoJf2FGOA9L89k1GCg6W9AVlx2IBQ8h%2FwckiodyqwAAjwx2pByE83SYr5Ahk5j4Q%2BUQ%3D%3D&numOfRows=100&typeName=분할주의&pageNo=12
+12
+==================================
+http://apis.data.go.kr/1470000/DURPrdlstInfoService/getSeobangjeongPartitnAtentInfoList?servicekey=qx1rTzz3GHMRrD7mzJ%2BVoJf2FGOA9L89k1GCg6W9AVlx2IBQ8h%2FwckiodyqwAAjwx2pByE83SYr5Ahk5j4Q%2BUQ%3D%3D&numOfRows=100&typeName=분할주의&pageNo=13
+13
+==================================
+http://apis.data.go.kr/1470000/DURPrdlstInfoService/getSeobangjeongPartitnAtentInfoList?servicekey=qx1rTzz3GHMRrD7mzJ%2BVoJf2FGOA9L89k1GCg6W9AVlx2IBQ8h%2FwckiodyqwAAjwx2pByE83SYr5Ahk5j4Q%2BUQ%3D%3D&numOfRows=100&typeName=분할주의&pageNo=15
+43
+==================================
+http://apis.data.go.kr/1470000/DURPrdlstInfoService/getSeobangjeongPartitnAtentInfoList?servicekey=qx1rTzz3GHMRrD7mzJ%2BVoJf2FGOA9L89k1GCg6W9AVlx2IBQ8h%2FwckiodyqwAAjwx2pByE83SYr5Ahk5j4Q%2BUQ%3D%3D&numOfRows=100&typeName=분할주의&pageNo=16
+44
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+stuck while==================================
+http://apis.data.go.kr/1470000/DURPrdlstInfoService/getSeobangjeongPartitnAtentInfoList?servicekey=qx1rTzz3GHMRrD7mzJ%2BVoJf2FGOA9L89k1GCg6W9AVlx2IBQ8h%2FwckiodyqwAAjwx2pByE83SYr5Ahk5j4Q%2BUQ%3D%3D&numOfRows=100&typeName=분할주의&pageNo=18
+2
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>NORMAL SERVICE.</resultMsg>
+</header>
+<body>
+<numOfRows>100</numOfRows>
+<pageNo>18</pageNo>
+<totalCount>1570</totalCount>
+<items/>
+</body>
+</response>
+==================================
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+stuck while==================================
+http://apis.data.go.kr/1470000/DURPrdlstInfoService/getSeobangjeongPartitnAtentInfoList?servicekey=qx1rTzz3GHMRrD7mzJ%2BVoJf2FGOA9L89k1GCg6W9AVlx2IBQ8h%2FwckiodyqwAAjwx2pByE83SYr5Ahk5j4Q%2BUQ%3D%3D&numOfRows=100&typeName=분할주의&pageNo=55
+10
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>NORMAL SERVICE.</resultMsg>
+</header>
+<body>
+<numOfRows>100</numOfRows>
+<pageNo>55</pageNo>
+<totalCount>1570</totalCount>
+<items/>
+</body>
+</response>
+==================================
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+stuck while==================================
+http://apis.data.go.kr/1470000/DURPrdlstInfoService/getSeobangjeongPartitnAtentInfoList?servicekey=qx1rTzz3GHMRrD7mzJ%2BVoJf2FGOA9L89k1GCg6W9AVlx2IBQ8h%2FwckiodyqwAAjwx2pByE83SYr5Ahk5j4Q%2BUQ%3D%3D&numOfRows=100&typeName=분할주의&pageNo=58
+12
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>NORMAL SERVICE.</resultMsg>
+</header>
+<body>
+<numOfRows>100</numOfRows>
+<pageNo>58</pageNo>
+<totalCount>1570</totalCount>
+<items/>
+</body>
+</response>
+==================================

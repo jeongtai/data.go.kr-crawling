@@ -1,0 +1,34 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+stuck while==================================
+http://apis.data.go.kr/1470000/DURPrdlstInfoService/getOdsnAtentInfoList?servicekey=qx1rTzz3GHMRrD7mzJ%2BVoJf2FGOA9L89k1GCg6W9AVlx2IBQ8h%2FwckiodyqwAAjwx2pByE83SYr5Ahk5j4Q%2BUQ%3D%3D&numOfRows=100&typeName=노인주의&pageNo=27
+1
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>NORMAL SERVICE.</resultMsg>
+</header>
+<body>
+<numOfRows>100</numOfRows>
+<pageNo>27</pageNo>
+<totalCount>67</totalCount>
+<items/>
+</body>
+</response>
+==================================
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+stuck while==================================
+http://apis.data.go.kr/1470000/DURPrdlstInfoService/getOdsnAtentInfoList?servicekey=qx1rTzz3GHMRrD7mzJ%2BVoJf2FGOA9L89k1GCg6W9AVlx2IBQ8h%2FwckiodyqwAAjwx2pByE83SYr5Ahk5j4Q%2BUQ%3D%3D&numOfRows=100&typeName=노인주의&pageNo=33
+3
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>NORMAL SERVICE.</resultMsg>
+</header>
+<body>
+<numOfRows>100</numOfRows>
+<pageNo>33</pageNo>
+<totalCount>67</totalCount>
+<items/>
+</body>
+</response>
+==================================
