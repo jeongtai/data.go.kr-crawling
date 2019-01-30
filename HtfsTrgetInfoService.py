@@ -27,14 +27,8 @@ def getLink():
         #    main.queue.put(flist)
         #    break
         # key는 config.py 있는 변수, async_data_crwaler에서 가져옴, key와 numofrows는 필수
-        # 필수 요청 메세지로 prdlst_nm 넣어줌
-        #0넣으면 1793개 밖에 안뽑음
-
-
-        params = {'servicekey': main.key,'prdlst_nm':" ", 'numOfRows': 100}
-
-
-
+        # 필수 요청 메세지로 prdlst_nm 넣어줌( ' '(빈칸), '0' ~ '3000' 까지 존재)
+        params = {'servicekey': main.key,'prdlst_nm':"", 'numOfRows': 100}
 
         # if addUrl != 'getDurPrdlstInfoList':
         #     params.update({'typeName': column.typeName[addUrl]})
@@ -43,12 +37,30 @@ def getLink():
         params_str = "&".join("%s=%s" % (k, v) for k, v in params.items())
 
 
+
+
         requestUrl = baseUrl + addUrl
+
+        print("뽑아보자~~~ params params_str requestUrl")
+
+
+        # prdlst_nm = ' ',
+        # for prdlst in range(0, 3000):
+        #     params_str1 = params_str
+        #     params_str1 += '&prdlst_nm=' + str(prdlst)
+        #
+        #     flist = []
+        #     flist.append(addUrl)
+
+        # request 파라미터에
+        #리퀘하는 try문
         try:
             # request data
             getdata = requests.get(requestUrl, params=params_str)
         except:
             print('request error')
+
+        #리퀘 받은거 lxml-xml로 파싱하는 try문
         try:
             # response data xml 로 파싱
             soup = BS(getdata.text, 'lxml-xml')
@@ -62,8 +74,11 @@ def getLink():
                 print('검색결과없음')
                 totalcount = 0
             print('총 개수: ', totalcount)
+
+            #
             if totalcount != 0:
                 page = int(totalcount / 100) + 1
+
                 flist = []
                 flist.append(addUrl)
 
@@ -76,7 +91,7 @@ def getLink():
                     furl.append(requestUrl + '?' + params_str2)
                 flist.append(furl)
                 print('flist를 뽑아보겠어요~~~~~~~~~~~')
-                pdb.set_trace()
+
                 # queue 에 저장
                 main.queue.put(flist)
         except:
@@ -85,6 +100,6 @@ def getLink():
 
 # queue init
 if __name__ == "__main__":
+    print("여기서 에러가 날까요? 메인 밑이야")
     main.pool.spawn(getLink).join()
-
     main.init()
