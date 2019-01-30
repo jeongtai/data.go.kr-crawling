@@ -152,4 +152,3 @@ apis/csv
 # End of https://www.gitignore.io/api/vim,python
 *.txt
 !requirments.txt
-medicInsttDetailInfoService_error_log/getCgffdAddiInfoList_err.txt
