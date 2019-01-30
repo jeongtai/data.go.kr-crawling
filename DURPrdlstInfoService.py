@@ -1,4 +1,5 @@
-##runtime중 메모리수정
+#DUR품목정보서비스
+#runtime중 메모리수정
 import gevent.monkey
 gevent.monkey.patch_all()
 import requests
@@ -14,8 +15,8 @@ import column
 def getLink():
     baseUrl = 'http://apis.data.go.kr/1470000/DURPrdlstInfoService/'
     #오퍼레이션명
-    urlList = 'getEfcyDplctInfoList', 'getDurPrdlstInfoList', 'getSeobangjeongPartitnAtentInfoList', 'getOdsnAtentInfoList', 'getMdctnPdAtentInfoList', 'getCpctyAtentInfoList', 'getPwnmTabooInfoList', 'getSpcifyAgrdeTabooInfoList', 'getUsjntTabooInfoList'
-    # 'getPwnmTabooInfoList','getSpcifyAgrdeTabooInfoList','getUsjntTabooInfoList',
+    urlList = 'getUsjntTabooInfoList', #'getDurPrdlstInfoList', 'getEfcyDplctInfoList',  'getSeobangjeongPartitnAtentInfoList', 'getOdsnAtentInfoList', 'getMdctnPdAtentInfoList', 'getCpctyAtentInfoList', 'getPwnmTabooInfoList', 'getSpcifyAgrdeTabooInfoList', 'getUsjntTabooInfoList'
+    # 'getPwnmTabooInfoList','getSpcifyAgrdeTabooInfoList',
 
     for addUrl in urlList:
         # if addUrl == 'finish':
@@ -57,6 +58,7 @@ def getLink():
                 flist.append(addUrl)
 
                 furl = []
+                print('queue link ', page)
                 for i in range(page):
                     params_str2 = params_str
                     # request 파라미터에 pageno 추가
