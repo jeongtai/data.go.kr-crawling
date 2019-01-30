@@ -1,0 +1,11 @@
+DURPrdlstInfoService = DUR품목정보서비스
+
+hospInfoService = 건강보험심사평가원 병원정보 서비스
+
+msupCmpnMeftInfoService = 의약품성분약효정보조회서비스
+
+mdlrtActionInfoService = 건강보험심사평가원 진료행위정보서비스
+
+HtfsTrgetInfoService = 건강기능식품 대상별 정보DB 서비스
+
+medicInsttDetailInfoService  = 의료기관별 상세정보 서비스
