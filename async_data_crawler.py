@@ -30,8 +30,6 @@ start_time = time.time()
 #pool_excel : excel용 worker ( 엑셀 워커)
 pool = gevent.pool.Pool(15)
 pool_excel = gevent.pool.Pool(15)
-
-
 pool_conn = gevent.pool.Pool(24)
 # manager = multiprocessing.Manager()
 queue = gevent.queue.Queue()
@@ -67,12 +65,13 @@ def make_row(item, name):
     try:
         #csv index
         print('connect make_row')
+        #영문 컬럼명
         dfcols_eng = list(column.typeList[name].keys())
+        #한글 컬럼명(실제로 엑셀 컬럼에 넣을 데이터)
         dfcols = list(column.typeList[name].values())
         row_df_xml = None
         for idx, sitem in enumerate(item):
             try :
-
                 if idx ==0 :
                     row_df_xml = pd.DataFrame([[sitem.find(api_column).text for api_column in dfcols_eng]],columns=dfcols)
                     continue
@@ -85,7 +84,6 @@ def make_row(item, name):
         return row_df_xml
 
     except Exception as e:
-
         print(e)
         raise ValueError('FAIL MULTI PROCESSING')
 
