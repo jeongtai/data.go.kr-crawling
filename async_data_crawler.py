@@ -55,6 +55,12 @@ except OSError as exc:
     if os.path.isdir(file_name+'_error_log'):
         pass
 
+try:
+    os.makedirs('csv')
+except OSError as exc:
+    if os.path.isdir('csv'):
+        pass
+
 def multi_wrapper(args):
     return make_row(*args)
 
@@ -69,18 +75,16 @@ def make_row(item, name):
         dfcols_eng = list(column.typeList[name].keys())
         #한글 컬럼명(실제로 엑셀 컬럼에 넣을 데이터)
         dfcols = list(column.typeList[name].values())
-        row_df_xml = None
-        for idx, sitem in enumerate(item):
-            try :
-                if idx ==0 :
-                    row_df_xml = pd.DataFrame([[sitem.find(api_column).text for api_column in dfcols_eng]],columns=dfcols)
-                    continue
-                add_df = pd.DataFrame([[sitem.find(api_column).text for api_column in dfcols_eng]],columns=dfcols)
 
-                row_df_xml = pd.concat([row_df_xml,add_df] , sort=False)
-            except :
-                print('make_row error')
-                return None
+
+        row_df_xml = None 
+        for idx,sitem in enumerate(item):
+            if idx ==0 :
+                row_df_xml = pd.DataFrame([[sitem.find(api_column).text for api_column in dfcols_eng if sitem.find(api_column)]],columns=dfcols)
+                continue
+            add_df = pd.DataFrame([[sitem.find(api_column).text for api_column in dfcols_eng if sitem.find(api_column)]],columns=dfcols)
+            row_df_xml = pd.concat([row_df_xml,add_df], sort=False)
+
         return row_df_xml
 
     except Exception as e:
@@ -91,6 +95,7 @@ def connect_api(seperate, name):
     print('connect api access')
     global error_count 
     error_log = open(f'./{file_name}_error_log/{name}_err.txt',mode='a')
+
     while True:
         try:
             getdata = requests.get(seperate)
@@ -99,12 +104,16 @@ def connect_api(seperate, name):
             pass
         else:
             break
+
+    getdata = requests.get(seperate)
+
     try:
         soup = BS(getdata.text,'lxml-xml') 
         okflag = soup.find('resultCode')
         while okflag is None:
             try:
                 print('internal 500 error fuc')
+
                 getdata = requests.get(seperate)
                 soup = BS(getdata.text,'lxml-xml')
                 okflag = soup.find('resultCode')
@@ -114,6 +123,15 @@ def connect_api(seperate, name):
                 error_log.write('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n')
             except:
                 pass
+                gevent.sleep(0.6)
+                getdata = requests.get(seperate)
+                soup = BS(getdata.text,'lxml-xml') 
+                okflag = soup.find('resultCode')
+                error_log.write('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n')
+                error_log.write('stuck while')
+                error_log.write(soup.prettify)
+                error_log.write('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n')
+
         if okflag.text != '00':
             print("okflag: ",okflag.text)
             
